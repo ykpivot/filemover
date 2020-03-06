@@ -1,14 +1,19 @@
 package com.yosep.filemover;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+@Component
 public class FileMonitor {
 
     private FileMonitorConfig fileMonitorConfig;
     private FileSystemWrapper fileSystemWrapper;
 
+    @Autowired
     public FileMonitor(FileMonitorConfig fileMonitorConfig, FileSystemWrapper fileSystemWrapper) {
         this.fileMonitorConfig = fileMonitorConfig;
         this.fileSystemWrapper = fileSystemWrapper;
