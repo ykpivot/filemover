@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.List;
 
 public class FileSystemWrapper {
-    public List<File> getNewFiles() {
+    public List<File> getNewFiles(String directoryPath) {
         return null;
     }
 

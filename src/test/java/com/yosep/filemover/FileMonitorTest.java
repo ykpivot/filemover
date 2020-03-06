@@ -29,7 +29,7 @@ class FileMonitorTest {
         when(fileMonitorConfig.getOutputFolder()).thenReturn(outputFolder);
 
         FileSystemWrapper fileSystemWrapper = mock(FileSystemWrapper.class);
-        when(fileSystemWrapper.getNewFiles()).thenReturn(files);
+        when(fileSystemWrapper.getNewFiles(inputFolder)).thenReturn(files);
 
         FileMonitor fileMonitor = new FileMonitor(fileMonitorConfig, fileSystemWrapper);
 

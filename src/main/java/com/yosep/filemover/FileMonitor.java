@@ -14,7 +14,7 @@ public class FileMonitor {
     }
 
     public void process() {
-        List<File> files = this.fileSystemWrapper.getNewFiles();
+        List<File> files = this.fileSystemWrapper.getNewFiles(fileMonitorConfig.getInputFolder());
 
         for (File file: files) {
             String fileName = file.getName();
