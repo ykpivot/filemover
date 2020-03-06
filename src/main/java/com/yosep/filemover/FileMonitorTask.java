@@ -3,6 +3,8 @@ package com.yosep.filemover;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+
 @Component
 public class FileMonitorTask {
 
@@ -13,7 +15,7 @@ public class FileMonitorTask {
     }
 
     @Scheduled(fixedDelay = 1000)
-    public void scheduled() {
+    public void scheduled() throws IOException {
         this.fileMonitor.process();
     }
 }

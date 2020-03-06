@@ -1,6 +1,7 @@
 package com.yosep.filemover;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class FileMonitor {
@@ -13,7 +14,7 @@ public class FileMonitor {
         this.fileSystemWrapper = fileSystemWrapper;
     }
 
-    public void process() {
+    public void process() throws IOException {
         List<File> files = this.fileSystemWrapper.getNewFiles(fileMonitorConfig.getInputFolder());
 
         for (File file: files) {
