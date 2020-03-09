@@ -8,4 +8,8 @@ import lombok.Data;
 public class FileWatcher {
     private int bankId;
     private boolean skipLargeFile;
+
+    public void start() {
+
+    }
 }
